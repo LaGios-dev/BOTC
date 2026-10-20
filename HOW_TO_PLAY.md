@@ -18,13 +18,13 @@ Blood on the Clocktower is a game of murder, deception, logic, and deduction for
 Every player is secretly assigned a character belonging to one of two teams:
 
 #### 🟢 The Good Team
-* **Townsfolk (Citadins):** Good players with beneficial abilities used to gather information, protect villagers, or counter evil.
-* **Outsiders (Étrangers):** Good players whose abilities cause negative drawbacks or introduce confusion to the village.
+* **Townsfolk:** Good players with beneficial abilities used to gather information, protect villagers, or counter evil.
+* **Outsiders:** Good players whose abilities cause negative drawbacks or introduce confusion to the village.
 * **Objective:** Find and execute the **Imp** during the daily Town Council vote.
 
 #### 🔴 The Evil Team
-* **Minions (Sbires):** Evil players who know the Imp's identity. Their job is to disrupt good abilities, mislead debates, and shield their leader.
-* **The Imp (Diablotin):** The head of the evil faction. Strikes and kills one player each night.
+* **Minions:** Evil players who know the Imp's identity. Their job is to disrupt good abilities, mislead debates, and shield their leader.
+* **The Imp:** The head of the evil faction. Strikes and kills one player each night.
 * **Objective:** Achieve numerical superiority (living Evil players outnumber living Good players).
 
 > 💡 **Role Guide:** Exact abilities and role interactions are detailed in-game in your **Role Guide Book** (use `/botc roles`).
@@ -58,7 +58,7 @@ The game alternates between two main phases: **Night** and **Day**.
 2. **Public Debate:** Players share clues, cross-reference stories, and accuse suspects.
 3. **Nominations:** Any living player can publicly nominate a suspect for execution using:
    ```text
-   /botc nommer <playername>
+   /botc nominate <playername>
    ```
 4. **Voting (GUI):** When a nomination opens, an interactive voting interface appears for eligible players to cast their vote (*Yes* or *No*).
 5. If an accused player receives a majority of votes among living players (and exceeds any prior nomination that day), they are **executed** at the end of the day.
@@ -74,8 +74,8 @@ The game alternates between two main phases: **Night** and **Day**.
 
 #### 🍷 Poison & Drunkenness (Misinformation)
 * Information in Blood on the Clocktower is **never guaranteed to be 100% true**.
-* A **Poisoner (Empoisonneur)** can poison an ability, forcing the plugin to return false or arbitrary results to the target.
-* The **Drunk (Ivrogne)** genuinely believes they are a specific Townsfolk, but secretly receives inaccurate information from the plugin.
+* A **Poisoner** can poison an ability, forcing the plugin to return false or arbitrary results to the target.
+* The **Drunk** genuinely believes they are a specific Townsfolk, but secretly receives inaccurate information from the plugin.
 
 #### 🎭 Bluffing & Deduction
 * The exact list of roles in play is kept secret. Good players must deduce which characters actually exist, while Evil players are free to fabricate fake claims to blend in.
@@ -87,8 +87,8 @@ The game alternates between two main phases: **Night** and **Day**.
 | Command | Role / Phase | Description |
 | :--- | :--- | :--- |
 | `/botc roles` | Any | Gives you the in-game role manual listing every character in the edition |
-| `/botc nommer <player>` | Council Phase | Nominates the specified player for execution |
-| `/botc pourfendre <player>` | Council Phase | Publicly attempts to strike down the target. Kills them instantly if they are the Demon (only effective for the Slayer, but can be bluffed by any player once per game) |
+| `/botc nominate <player>` | Council Phase | Nominates the specified player for execution |
+| `/botc slay <player>` | Council Phase | Publicly attempts to strike down the target. Kills them instantly if they are the Demon (only effective for the Slayer, but can be bluffed by any player once per game) |
 
 ---
 
@@ -190,6 +190,7 @@ You can customize the pacing of the game using the following configuration comma
 | `/botc configset actionTime <seconds>` | Timeout for GUI night interactions and council votes | `15` |
 | `/botc configset dayTime <seconds>` | Free-roaming discussion & whisper phase duration | `240` |
 | `/botc configset councilTime <seconds>` | Public town council debate duration | `120` |
+| `/botc configset language <en/fr>` | Language of the game | `en` |
 
 ### 3. Register Players & Seating Order ⚠️
 
